@@ -23,7 +23,7 @@ new class extends Component {};
                     <span class="text-accent">
                         <x-officetalk::logo-mark :size="32" color="currentColor" />
                     </span>
-                    <span class="font-display text-h4 font-medium text-bg">{{ $contact['brand_name'] }}</span>
+                    <span class="font-display text-h4 font-medium text-bg dark:text-white">{{ $contact['brand_name'] }}</span>
                 </div>
                 <address class="mt-s3 font-sans text-body not-italic leading-relaxed text-bg/85">
                     {{ $contact['legal_name'] }}<br>
@@ -36,7 +36,7 @@ new class extends Component {};
 
             {{-- Spalte 2 · Navigation --}}
             <nav aria-label="Footer-Navigation">
-                <h2 class="font-sans text-eyebrow uppercase tracking-[0.08em] text-bg/60">
+                <h2 class="font-sans text-eyebrow uppercase tracking-[0.08em] text-bg/60 dark:text-white">
                     Navigation
                 </h2>
                 <ul class="mt-s3 space-y-s2 font-sans text-body">
@@ -51,10 +51,10 @@ new class extends Component {};
 
             {{-- Spalte 3 · Kontakt --}}
             <div>
-                <h2 class="font-sans text-eyebrow uppercase tracking-[0.08em] text-bg/60">
+                <h2 class="font-sans text-eyebrow uppercase tracking-[0.08em] text-bg/60 dark:text-white">
                     Kontakt
                 </h2>
-                <ul class="mt-s3 space-y-s2 font-sans text-body">
+                <ul class="mt-s3 space-y-s2 font-sans text-body  dark:text-white">
                     @if ($contact['phone'] && $contact['phone'] !== '[Telefonnummer]')
                         <li><a href="tel:{{ preg_replace('/\s+/', '', $contact['phone']) }}" class="officetalk-link text-bg transition-colors duration-200 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">{{ $contact['phone'] }}</a></li>
                     @endif
@@ -70,10 +70,10 @@ new class extends Component {};
 
             {{-- Spalte 4 · Kooperationspartner --}}
             <div>
-                <h2 class="font-sans text-eyebrow uppercase tracking-[0.08em] text-bg/60">
+                <h2 class="font-sans text-eyebrow uppercase tracking-[0.08em] text-bg/60 dark:text-white">
                     Redaktionelle Distribution
                 </h2>
-                <ul class="mt-s3 space-y-s2 font-sans text-body">
+                <ul class="mt-s3 space-y-s2 font-sans text-body dark:text-white">
                     @foreach ($contact['partners'] as $partner)
                         <li>
                             <a
@@ -94,7 +94,7 @@ new class extends Component {};
         <hr class="my-s5 border-t border-bg/20" />
 
         {{-- Rechtsbalken · Copyright links, Legal-Links rechts --}}
-        <div class="flex flex-col items-start justify-between gap-s3 font-sans text-meta text-bg/60 md:flex-row md:items-center">
+        <div class="flex flex-col items-start justify-between gap-s3 font-sans text-meta text-bg/60 dark:text-white md:flex-row md:items-center">
             <p>
                 © {{ date('Y') }} {{ $contact['brand_name'] }} · {{ $contact['legal_name'] }} · Alle Rechte vorbehalten.
             </p>
@@ -110,7 +110,7 @@ new class extends Component {};
         </div>
 
         {{-- Microcopy-Block · Geo-Einordnung + Team-Kontext, sehr dezent --}}
-        <div class="mt-s4 border-t border-bg/10 pt-s4 font-sans text-meta text-bg/55 leading-relaxed">
+        <div class="mt-s4 border-t border-bg/10 pt-s4 font-sans text-meta text-bg/55 dark:text-white leading-relaxed">
             <p>Videoproduktion in Wien, Drehs im gesamten DACH-Raum.</p>
             <p class="mt-s1">
                 Produktion: Gerhard Popp · Redaktionelle Kooperationspartner: Walter Senk und Bernd Affenzeller.

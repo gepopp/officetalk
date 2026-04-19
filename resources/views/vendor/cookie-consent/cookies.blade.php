@@ -3,7 +3,7 @@
 <aside
     id="cookies-policy"
     data-officetalk-consent
-    class="officetalk-consent cookies cookies--no-js fixed inset-x-0 bottom-0 z-[90] bg-surface-strong text-bg shadow-[0_-16px_48px_-16px_rgba(17,17,17,0.3)]"
+    class="officetalk-consent cookies cookies--no-js fixed inset-x-0 bottom-0 z-[90] bg-surface-strong text-bg drak:text-white shadow-[0_-16px_48px_-16px_rgba(17,17,17,0.3)]"
     data-text="{{ json_encode(__('cookieConsent::cookies.details')) }}"
 >
     <div class="cookies__alert">
@@ -15,10 +15,10 @@
                     <p class="font-sans text-eyebrow uppercase tracking-[0.12em] text-accent">
                         @lang('cookieConsent::cookies.title')
                     </p>
-                    <div class="cookies__intro mt-s2 font-sans text-body leading-relaxed text-bg/90">
+                    <div class="cookies__intro mt-s2 font-sans text-body leading-relaxed text-bg/90 drak:text-white">
                         <p>@lang('cookieConsent::cookies.intro')</p>
                         @if($policy)
-                            <p class="mt-s1 font-sans text-meta text-bg/70">
+                            <p class="mt-s1 font-sans text-meta text-bg/70 drak:text-white">
                                 @lang('cookieConsent::cookies.link', ['url' => $policy])
                             </p>
                         @endif
@@ -81,7 +81,7 @@
                                         />
                                     @endif
                                     <span class="cookies__box">
-                                        <strong class="cookies__label font-display text-h4 font-medium not-italic text-bg">
+                                        <strong class="cookies__label font-display text-h4 font-medium not-italic text-bg drak:text-white">
                                             {{ $category->title }}
                                         </strong>
                                     </span>
@@ -98,8 +98,8 @@
                                 <ul class="cookies__definitions mt-s3 space-y-s2 border-t border-bg/15 pt-s3 md:ml-s5">
                                     @foreach($category->getCookies() as $cookie)
                                         <li class="cookies__cookie">
-                                            <p class="cookies__name font-sans text-meta font-semibold text-bg">{{ $cookie->name }}</p>
-                                            <p class="cookies__duration font-sans text-eyebrow uppercase tracking-[0.08em] text-bg/60">
+                                            <p class="cookies__name font-sans text-meta font-semibold text-bg drak:text-white">{{ $cookie->name }}</p>
+                                            <p class="cookies__duration font-sans text-eyebrow uppercase tracking-[0.08em] text-bg/60 drak:text-white">
                                                 {{ Carbon\Carbon::now()->diffForHumans(Carbon\Carbon::now()->addMinutes($cookie->duration), true) }}
                                             </p>
                                             @if($cookie->description)
@@ -114,7 +114,7 @@
 
                             <a
                                 href="#cookies-policy-{{ $category->key() }}"
-                                class="cookies__details mt-s2 inline-block font-sans text-meta text-bg/70 underline underline-offset-2 transition-colors duration-200 hover:text-accent md:ml-s5"
+                                class="cookies__details mt-s2 inline-block font-sans text-meta text-bg/70 drak:text-white underline underline-offset-2 transition-colors duration-200 hover:text-accent md:ml-s5"
                             >
                                 @lang('cookieConsent::cookies.details.more')
                             </a>
