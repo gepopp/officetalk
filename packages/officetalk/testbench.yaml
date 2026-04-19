@@ -1,0 +1,13 @@
+providers:
+  - Officetalk\OfficetalkServiceProvider
+  - Livewire\LivewireServiceProvider
+
+migrations:
+  - database/migrations
+
+env:
+  - APP_KEY="base64:AckfSECXIvnK5r28GVIWUAxmbBSjTsmTWIx2oJoa4sQ="
+  - DB_CONNECTION=sqlite
+  - DB_DATABASE=":memory:"
+  - OFFICETALK_MEDIA_DISK=public
+  - OFFICETALK_CDN_BASE=https://cdn.test

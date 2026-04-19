@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__laravel-boost__search-docs",
+      "Bash(./vendor/bin/pint --dirty --format agent)",
+      "Bash(composer dump-autoload *)",
+      "Bash(php artisan *)",
+      "Bash(php -r 'require \"vendor/autoload.php\"; $app = require \"bootstrap/app.php\"; $app->make\\(\\\\Illuminate\\\\Contracts\\\\Console\\\\Kernel::class\\)->bootstrap\\(\\); $req = \\\\Illuminate\\\\Http\\\\Request::create\\(\"/officetalk\", \"GET\"\\); $resp = $app->handle\\($req\\); echo \"status=\".$resp->getStatusCode\\(\\).\" length=\".strlen\\($resp->getContent\\(\\)\\).PHP_EOL; if \\($resp->getStatusCode\\(\\) >= 500\\) { echo substr\\($resp->getContent\\(\\), 0, 2000\\); }')",
+      "Bash(../../vendor/bin/pest --compact)",
+      "Bash(php -r 'require \"vendor/autoload.php\"; $app = require \"bootstrap/app.php\"; $app->make\\(\\\\Illuminate\\\\Contracts\\\\Console\\\\Kernel::class\\)->bootstrap\\(\\); $req = \\\\Illuminate\\\\Http\\\\Request::create\\(\"/officetalk\", \"GET\"\\); $resp = $app->handle\\($req\\); echo \"status=\".$resp->getStatusCode\\(\\).\" length=\".strlen\\($resp->getContent\\(\\)\\).PHP_EOL; if \\($resp->getStatusCode\\(\\) >= 400\\) { echo substr\\(strip_tags\\($resp->getContent\\(\\)\\), 0, 800\\).PHP_EOL; }')",
+      "Bash(php -r 'require \"vendor/autoload.php\"; $app = require \"bootstrap/app.php\"; $app->make\\(\\\\Illuminate\\\\Contracts\\\\Console\\\\Kernel::class\\)->bootstrap\\(\\); foreach \\([\"/\", \"/folgen\", \"/gaeste\"] as $u\\) { $req = \\\\Illuminate\\\\Http\\\\Request::create\\($u, \"GET\"\\); $resp = $app->handle\\($req\\); echo $u.\" → \".$resp->getStatusCode\\(\\).\" \\(\".strlen\\($resp->getContent\\(\\)\\).\" bytes\\)\\\\n\"; }')",
+      "Bash(php -r 'require \"vendor/autoload.php\"; $app = require \"bootstrap/app.php\"; $app->make\\(\\\\Illuminate\\\\Contracts\\\\Console\\\\Kernel::class\\)->bootstrap\\(\\); foreach \\([\"/\", \"/folgen\"] as $u\\) { $req = \\\\Illuminate\\\\Http\\\\Request::create\\($u, \"GET\"\\); $resp = $app->handle\\($req\\); echo $u.\" → \".$resp->getStatusCode\\(\\).PHP_EOL; }')",
+      "Bash(php -r 'require \"vendor/autoload.php\"; $app = require \"bootstrap/app.php\"; $app->make\\(\\\\Illuminate\\\\Contracts\\\\Console\\\\Kernel::class\\)->bootstrap\\(\\); $req = \\\\Illuminate\\\\Http\\\\Request::create\\(\"/\", \"GET\"\\); $resp = $app->handle\\($req\\); echo \"status=\".$resp->getStatusCode\\(\\).\" length=\".strlen\\($resp->getContent\\(\\)\\).PHP_EOL; if \\($resp->getStatusCode\\(\\) >= 400\\) { echo substr\\(strip_tags\\($resp->getContent\\(\\)\\), 0, 1500\\); }')",
+      "mcp__Claude_Preview__preview_start",
+      "mcp__laravel-boost__read-log-entries",
+      "Bash(npm install *)",
+      "Bash(php -r 'require '\\\\''vendor/autoload.php'\\\\''; $app = require '\\\\''bootstrap/app.php'\\\\''; $app->make\\('\\\\''Illuminate\\\\Contracts\\\\Console\\\\Kernel'\\\\''\\)->bootstrap\\(\\); $path = resource_path\\('\\\\''views/officetalk/parts/⚡formats.blade.php'\\\\''\\); $contents = file_get_contents\\($path\\); $compiled = app\\('\\\\''blade.compiler'\\\\''\\)->compileString\\($contents\\); echo substr\\($compiled, 0, 3000\\);')",
+      "mcp__laravel-boost__last-error",
+      "Bash(grep -n \"\\\\\\\\.dark\\\\|--color\" \"C:/projects/officetalk-landing/resources/css/app.css\")",
+      "Bash(grep -n \"^?>\\\\|^<section\\\\|^};$\" \"C:/projects/officetalk-landing/resources/views/officetalk/parts/⚡pricing.blade.php\")",
+      "Bash(composer require *)",
+      "Bash(php -r 'require '\\\\''vendor/autoload.php'\\\\''; $app = require '\\\\''bootstrap/app.php'\\\\''; $app->make\\('\\\\''Illuminate\\\\Contracts\\\\Console\\\\Kernel'\\\\''\\)->bootstrap\\(\\); app\\(\\)->setLocale\\('\\\\''de'\\\\''\\); echo __\\('\\\\''validation.required'\\\\'', ['\\\\''attribute'\\\\'' => '\\\\''E-Mail'\\\\'']\\) . PHP_EOL; echo __\\('\\\\''validation.email'\\\\'', ['\\\\''attribute'\\\\'' => '\\\\''E-Mail'\\\\'']\\) . PHP_EOL;')",
+      "Bash(composer remove *)",
+      "Bash(magick --version)",
+      "Bash(php -m)",
+      "Bash(php build-favicon.php)",
+      "Bash(npm run *)"
+    ]
+  }
+}

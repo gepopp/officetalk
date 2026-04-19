@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+    <title>OfficeTalk – Bildmarke quadratisch</title>
+    <desc>Koffer mit integriertem Kamera-Objektiv, zentriert im quadratischen Safe-Area-Grid mit 20 Prozent Padding.</desc>
+
+    <g id="mark" transform="translate(30, 58)">
+        <path d="M 54 14 L 54 6 L 86 6 L 86 14"
+              stroke="#E3B505" stroke-width="4" fill="none" stroke-linecap="square" />
+        <rect x="12" y="16" width="116" height="60" rx="2" ry="2" fill="#E3B505" />
+        <line x1="42" y1="28" x2="98" y2="28" stroke="#111111" stroke-width="4" />
+        <line x1="42" y1="64" x2="98" y2="64" stroke="#111111" stroke-width="4" />
+        <circle cx="70" cy="46" r="11" fill="#111111" />
+        <ellipse cx="66.5" cy="43" rx="3.6" ry="1.8" fill="#FAFAF7" opacity="0.7" transform="rotate(-30 66.5 43)" />
+    </g>
+</svg>

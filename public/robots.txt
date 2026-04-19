@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /rechtliches/agb
+Disallow: /kontakt/bestaetigen/
+Disallow: /cookie-consent/
+Disallow: /livewire/
+
+Sitemap: https://www.officetalk.watch/sitemap.xml

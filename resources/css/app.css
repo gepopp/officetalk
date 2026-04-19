@@ -1,0 +1,232 @@
+@import 'tailwindcss';
+@import '../../vendor/livewire/flux/dist/flux.css';
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
+@source '../../vendor/livewire/flux/stubs/**/*.blade.php';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    /* Farbpalette */
+    --color-bg: #FAFAF7;
+    --color-surface: #F2F0EA;
+    --color-surface-strong: #2B2B28;
+    --color-accent: #E3B505;
+    --color-accent-hover: #9A7A04;
+    --color-ink: #111111;
+    --color-muted: #5A5A55;
+    --color-line: #E4E2DB;
+    --color-success: #2F6E3F;
+    --color-warning: #B8501C;
+
+    /* Logo-Detail: Rillen und Objektiv am Koffer. Light = Ink, Dark = Accent. */
+    --color-koffer-detail: #111111;
+
+    /* Typografie */
+    --font-display: "Fraunces", "Tiempos Headline", Georgia, serif;
+    --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+    /* Text-Skala */
+    --text-eyebrow: 13px;
+    --text-eyebrow--line-height: 1.2;
+    --text-eyebrow--letter-spacing: 0.08em;
+    --text-eyebrow--font-weight: 600;
+
+    --text-meta: 14px;
+    --text-meta--line-height: 1.45;
+
+    --text-body: 17px;
+    --text-body--line-height: 1.60;
+
+    --text-lead: 20px;
+    --text-lead--line-height: 1.55;
+
+    --text-h4: 22px;
+    --text-h4--line-height: 1.20;
+    --text-h4--letter-spacing: -0.005em;
+
+    --text-h3: 30px;
+    --text-h3--line-height: 1.15;
+    --text-h3--letter-spacing: -0.01em;
+
+    --text-h2: 44px;
+    --text-h2--line-height: 1.10;
+    --text-h2--letter-spacing: -0.015em;
+
+    --text-h1: 72px;
+    --text-h1--line-height: 1.05;
+    --text-h1--letter-spacing: -0.02em;
+
+    /* Spacing-Skala */
+    --spacing-s1: 8px;
+    --spacing-s2: 16px;
+    --spacing-s3: 24px;
+    --spacing-s4: 32px;
+    --spacing-s5: 48px;
+    --spacing-s6: 64px;
+    --spacing-s7: 96px;
+
+    /* Radien */
+    --radius: 4px;
+
+    /* Container */
+    --container-editorial: 1280px;
+
+    /* Easing */
+    --ease-editorial: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Paket-Views erfassen */
+@source "../../vendor/officetalk/officetalk/resources/views/**/*.blade.php";
+
+@layer theme {
+    .dark {
+        /* Editorial Dark-Palette · Inversion der Papier-Logik */
+        --color-bg: #17171A;
+        --color-surface: #1F1F22;
+        --color-surface-strong: #0F0F11;
+        --color-ink: #F0EFE8;
+        --color-muted: #9B9B96;
+        --color-line: #3A3A36;
+        /* Accent explizit halten — Flux würde sonst auf Weiß überschreiben. */
+        --color-accent: #E3B505;
+        --color-accent-hover: #F5C927;
+        --color-accent-content: #111111;
+        --color-accent-foreground: #111111;
+        /* Koffer-Detail bleibt Ink — die dunkle Linse ist das Kamera-Symbol
+           und muss auch im Dark Mode als Kontrast zum gelben Gehäuse sichtbar sein. */
+    }
+}
+
+@layer base {
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+
+    [x-cloak] {
+        display: none !important;
+    }
+
+    /* Scroll-Anchor-Offset · Sticky-Nav-Höhe kompensieren beim Scrollen zu #anchor */
+    section[id] {
+        scroll-margin-top: 120px;
+    }
+}
+
+@utility container {
+    max-width: var(--container-editorial);
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+}
+
+/* Innerhalb gelber Flächen invertiert das Koffer-Logo:
+   Gehäuse übernimmt currentColor (dunkel), Rillen/Linse werden gelb.
+   Damit bleibt die Kamera-Symbolik vor dem Accent-Hintergrund sichtbar. */
+.bg-accent {
+    --color-koffer-detail: var(--color-accent);
+}
+
+[data-flux-field]:not(ui-radio, ui-checkbox) {
+    @apply grid gap-2;
+}
+
+[data-flux-label] {
+    @apply  !mb-0 !leading-tight;
+}
+
+input:focus[data-flux-control],
+textarea:focus[data-flux-control],
+select:focus[data-flux-control] {
+    @apply outline-hidden ring-2 ring-accent ring-offset-2 ring-offset-accent-foreground;
+}
+
+/* Typografie für Rechtstexte · Impressum, Datenschutz, AGB.
+   Skaliert Headings sauber, gibt Absätzen Lese-Atem und listet konsistent. */
+.officetalk-legal-prose {
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 760px;
+}
+.officetalk-legal-prose h2 {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    color: var(--color-ink);
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-line);
+}
+.officetalk-legal-prose h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+.officetalk-legal-prose h3 {
+    font-family: var(--font-sans);
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--color-ink);
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+.officetalk-legal-prose p {
+    margin-top: 16px;
+    color: var(--color-ink);
+}
+.officetalk-legal-prose p + p {
+    margin-top: 12px;
+}
+.officetalk-legal-prose strong {
+    font-weight: 600;
+}
+.officetalk-legal-prose em {
+    font-style: italic;
+    color: var(--color-muted);
+}
+.officetalk-legal-prose ul {
+    margin-top: 12px;
+    padding-left: 20px;
+    list-style: disc;
+}
+.officetalk-legal-prose ol {
+    margin-top: 12px;
+    padding-left: 24px;
+    list-style: decimal;
+}
+.officetalk-legal-prose ul li,
+.officetalk-legal-prose ol li {
+    margin-top: 6px;
+    padding-left: 4px;
+}
+.officetalk-legal-prose a {
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+.officetalk-legal-prose a:hover {
+    text-decoration: none;
+}
+.officetalk-legal-prose .legal-stand {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 12px;
+    background-color: var(--color-surface);
+    font-size: 13px;
+    color: var(--color-muted);
+}
+
+/* \[:where(&)\]:size-4 {
+    @apply size-4;
+} */

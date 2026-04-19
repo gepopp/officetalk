@@ -1,0 +1,124 @@
+/**
+ * OfficeTalk – Base-Styles und Design-Tokens
+ *
+ * Im Host-Projekt über Vite einbinden:
+ *   import '../../vendor/officetalk/officetalk/resources/css/officetalk.css';
+ *
+ * Oder publizieren via: php artisan vendor:publish --tag=officetalk-assets
+ */
+
+@import url('https://cdn.immobilien-redaktion.com/fonts/fraunces.css');
+@import url('https://cdn.immobilien-redaktion.com/fonts/inter.css');
+
+:root {
+    --color-bg: #FAFAF7;
+    --color-surface: #F2F0EA;
+    --color-surface-strong: #2B2B28;
+    --color-accent: #E3B505;
+    --color-accent-hover: #9A7A04;
+    --color-ink: #111111;
+    --color-muted: #5A5A55;
+    --color-line: #E4E2DB;
+    --color-success: #2F6E3F;
+    --color-warning: #B8501C;
+
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+    --radius: 4px;
+
+    --ease-editorial: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* --- Pullquote-Ornament --- */
+.officetalk-pullquote {
+    border-left: 2px solid var(--color-accent);
+    padding-left: 1.5rem;
+    font-family: var(--font-display);
+    font-style: italic;
+}
+
+/* --- Koffer-Section-Divider --- */
+.officetalk-divider {
+    position: relative;
+    height: 2px;
+    background: var(--color-accent);
+    margin-block: var(--space-5, 48px);
+}
+
+.officetalk-divider::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 16px;
+    background: var(--color-bg);
+    border: 2px solid var(--color-accent);
+    border-radius: 2px;
+}
+
+/* --- Scroll-Progress --- */
+.officetalk-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--color-accent);
+    width: 0;
+    z-index: 100;
+    transition: width 80ms linear;
+}
+
+/* --- Link-Underline-Animation --- */
+.officetalk-link {
+    background-image: linear-gradient(var(--color-accent), var(--color-accent));
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: 0 100%;
+    transition: background-size 240ms var(--ease-editorial);
+}
+
+.officetalk-link:hover,
+.officetalk-link:focus-visible {
+    background-size: 100% 2px;
+}
+
+/* --- Card-Hover-Shadow --- */
+.officetalk-card {
+    transition:
+        transform 220ms var(--ease-editorial),
+        box-shadow 220ms var(--ease-editorial);
+}
+
+.officetalk-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(17, 17, 17, 0.12);
+}
+
+.officetalk-card:hover .officetalk-card__thumb {
+    transform: scale(1.04);
+}
+
+.officetalk-card__thumb {
+    transition: transform 220ms var(--ease-editorial);
+}
+
+/* --- Focus-Indikator (global) --- */
+.officetalk-focus:focus-visible,
+[data-officetalk] :focus-visible {
+    outline: 3px solid var(--color-ink);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+    .officetalk-card,
+    .officetalk-card__thumb,
+    .officetalk-link,
+    .officetalk-progress {
+        transition: none;
+    }
+}
