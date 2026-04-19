@@ -258,7 +258,6 @@ new class extends Component {
 @endscript
 
 <section
-    id="preise"
     class="officetalk-pricing dark relative overflow-hidden bg-bg pb-s7 text-ink"
     x-data="officetalkPricingParallax"
 >
@@ -291,7 +290,8 @@ new class extends Component {
     </span>
 
     <div
-        class="relative container pt-s5 md:pt-s6 motion-safe:will-change-transform"
+        id="preise"
+        class="relative container pt-s5 scroll-mt-[120px] md:pt-s6 motion-safe:will-change-transform"
         :style="`transform: translate3d(0, ${-progress * 290}px, 0); margin-bottom: ${-progress * 290}px;`"
     >
 
@@ -414,7 +414,29 @@ new class extends Component {
          ══════════════════════════════════════════════════════ --}}
     <div
         x-cloak
-        x-data="{ calcs: @js($calculations) }"
+        x-data="{
+            calcs: @js($calculations),
+            init() {
+                // Deep-Link · öffnet das Modal automatisch, wenn ?kalkulation=<1..6>
+                // in der URL steht. Für geteilte Links aus Format-Cards, FAQ, E-Mail etc.
+                const params = new URLSearchParams(window.location.search);
+                const raw = params.get('kalkulation');
+                const id = parseInt(raw, 10);
+                if (! isNaN(id) && id >= 1 && id <= 6 && this.calcs[id]) {
+                    this.$nextTick(() => {
+                        Alpine.store('priceCalculation').open(id);
+                        // Sanft zur Preise-Sektion scrollen, damit nach Schließen
+                        // der Kontext sichtbar bleibt.
+                        setTimeout(() => {
+                            document.getElementById('preise')?.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start',
+                            });
+                        }, 200);
+                    });
+                }
+            },
+        }"
         x-show="$store.priceCalculation.openId"
         @keydown.escape.window="$store.priceCalculation.close()"
         x-transition:enter="transition ease-out duration-300"

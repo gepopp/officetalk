@@ -26,11 +26,11 @@ new class extends Component {};
         </a>
 
         <div class="hidden items-center gap-s3 font-sans text-body text-ink lg:flex">
-            <a href="{{ route('officetalk.landing') }}#distribution" wire:navigate class="officetalk-link">Distribution</a>
-            <a href="{{ route('officetalk.landing') }}#service" wire:navigate class="officetalk-link">Prozess</a>
-            <a href="{{ route('officetalk.landing') }}#formats" wire:navigate class="officetalk-link">Formate</a>
-            <a href="{{ route('officetalk.landing') }}#preise" wire:navigate class="officetalk-link">Preise</a>
-            <a href="{{ route('officetalk.landing') }}#faq" wire:navigate class="officetalk-link">FAQ</a>
+            <a href="{{ route('officetalk.landing') }}#distribution" class="officetalk-link">Distribution</a>
+            <a href="{{ route('officetalk.landing') }}#service" class="officetalk-link">Prozess</a>
+            <a href="{{ route('officetalk.landing') }}#formats" class="officetalk-link">Formate</a>
+            <a href="{{ route('officetalk.landing') }}#preise" class="officetalk-link">Preise</a>
+            <a href="{{ route('officetalk.landing') }}#faq" class="officetalk-link">FAQ</a>
         </div>
 
         <div class="flex items-center gap-s3">

@@ -26,10 +26,9 @@
     <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
     <meta name="theme-color" content="#E3B505">
 
-    {{-- Preload kritische Fonts --}}
-    <link rel="preload" href="{{ config('officetalk.media.cdn_base') }}/fonts/inter-latin-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ config('officetalk.media.cdn_base') }}/fonts/inter-latin-600.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ config('officetalk.media.cdn_base') }}/fonts/fraunces-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+    {{-- Adobe-Fonts-Typekit · DNS-Preconnect beschleunigt das CSS-Fetching --}}
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+    <link rel="preconnect" href="https://p.typekit.net" crossorigin>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles

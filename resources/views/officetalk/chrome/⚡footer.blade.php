@@ -40,12 +40,12 @@ new class extends Component {};
                     Navigation
                 </h2>
                 <ul class="mt-s3 space-y-s2 font-sans text-body">
-                    <li><a href="{{ $landing }}#distribution" wire:navigatepa  class="officetalk-link text-bg transition-colors duration-200 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Distribution</a></li>
-                    <li><a href="{{ $landing }}#service" wire:navigatepa  class="officetalk-link text-bg transition-colors duration-200 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Prozess</a></li>
-                    <li><a href="{{ $landing }}#formats" wire:navigatepa  class="officetalk-link text-bg transition-colors duration-200 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Formate</a></li>
-                    <li><a href="{{ $landing }}#preise" wire:navigatepa  class="officetalk-link text-bg transition-colors duration-200 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Preise</a></li>
-                    <li><a href="{{ $landing }}#faq" wire:navigatepa  class="officetalk-link text-bg transition-colors duration-200 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">FAQ</a></li>
-                    <li><a href="{{ $landing }}#kontakt" wire:navigatepa  class="officetalk-link text-bg transition-colors duration-200 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Kontakt</a></li>
+                    <li><a href="{{ $landing }}#distribution" class="officetalk-link text-bg transition-colors duration-200 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Distribution</a></li>
+                    <li><a href="{{ $landing }}#service"  class="officetalk-link text-bg transition-colors duration-200 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Prozess</a></li>
+                    <li><a href="{{ $landing }}#formats" class="officetalk-link text-bg transition-colors duration-200 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Formate</a></li>
+                    <li><a href="{{ $landing }}#preise"  class="officetalk-link text-bg transition-colors duration-200 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Preise</a></li>
+                    <li><a href="{{ $landing }}#faq"  class="officetalk-link text-bg transition-colors duration-200 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">FAQ</a></li>
+                    <li><a href="{{ $landing }}#kontakt"  class="officetalk-link text-bg transition-colors duration-200 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Kontakt</a></li>
                 </ul>
             </nav>
 

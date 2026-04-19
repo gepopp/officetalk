@@ -53,7 +53,6 @@ class extends Component {
                         Telefon: <a href="tel:{{ preg_replace('/\s+/', '', $contact['phone']) }}">{{ $contact['phone'] }}</a><br>
                     @endif
                     E-Mail: <a href="mailto:{{ $contact['email'] }}">{{ $contact['email'] }}</a><br>
-                    UID-Nummer: <em>[ATU-Nummer – vor Go-Live einfügen]</em><br>
                     Gewerbe: Werbeagentur (freies Gewerbe)<br>
                     Mitglied der Wirtschaftskammer Wien, Fachgruppe Werbung und Marktkommunikation.
                 </p>
@@ -94,7 +93,7 @@ class extends Component {
                     <strong>Speicherdauer:</strong> 7 Tage; bei Vorliegen eines Sicherheitsvorfalls bis zur abschließenden Aufklärung, längstens 6 Monate.
                 </p>
                 <p>
-                    <strong>Auftragsverarbeiter (Hosting):</strong> <em>[Name und Anschrift des Hosting-Providers]</em>. Mit dem Provider besteht ein Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO. Der Server-Standort befindet sich in <em>[Österreich / Deutschland / EU]</em>.
+                    <strong>Auftragsverarbeiter (Hosting):</strong> <strong>DigitalOcean, LLC</strong>, 101 Avenue of the Americas, 10th Floor, New York, NY 10013, USA. Mit DigitalOcean besteht ein Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO einschließlich der EU-Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO). DigitalOcean ist unter dem EU-US Data Privacy Framework zertifiziert. Der Server-Standort befindet sich im EU-Rechenzentrum <em>[Frankfurt (FRA1) oder Amsterdam (AMS3) — konkreten Standort vor Go-Live prüfen]</em>.
                 </p>
 
                 <h2>4. Kontaktaufnahme (Formular, E-Mail, Telefon)</h2>
@@ -178,18 +177,7 @@ class extends Component {
                     Weitere Informationen: <a href="https://vimeo.com/privacy" target="_blank" rel="noopener noreferrer">vimeo.com/privacy</a>.
                 </p>
 
-                <h2>8. Terminbuchung</h2>
-                <p>
-                    Für die vereinfachte Vereinbarung von Terminen bieten wir einen Link zu einem externen Terminbuchungstool an. Klicken Sie auf den Terminbuchungs-Link, werden Sie auf die Infrastruktur des jeweiligen Anbieters weitergeleitet. Dabei werden die von Ihnen eingegebenen Daten (insbesondere Name, E-Mail-Adresse, Termingrund, Zeitzone) sowie technische Verbindungsdaten durch den Anbieter verarbeitet. Diese Daten werden an uns weitergeleitet, um den Termin zu bestätigen und durchzuführen.
-                </p>
-                <p>
-                    <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Durchführung vorvertraglicher Maßnahmen bzw. Vertragserfüllung) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an effizienter Terminorganisation).
-                </p>
-                <p>
-                    <strong>Auftragsverarbeitung:</strong> Mit dem Anbieter besteht ein Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO.
-                </p>
-
-                <h2>9. LinkedIn-Verlinkung</h2>
+                <h2>8. LinkedIn-Verlinkung</h2>
                 <p>
                     Auf unserer Website finden Sie einen Link zum LinkedIn-Profil von Gerhard Popp. Es handelt sich um eine <strong>reine Verlinkung</strong>, nicht um ein Social-Plugin oder ein LinkedIn Insight-Tag. Eine Datenübertragung an LinkedIn findet erst statt, wenn Sie aktiv auf den Link klicken.
                 </p>
@@ -200,15 +188,39 @@ class extends Component {
                     <strong>Rechtsgrundlage</strong> für die Darstellung des Links: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Selbstdarstellung und dem professionellen Netzwerkauftritt).
                 </p>
 
-                <h2>10. Schriftarten</h2>
+                <h2>9. Schriftarten (Adobe Fonts)</h2>
                 <p>
-                    Unsere Website verwendet <strong>lokal gehostete Schriftarten</strong>. Eine Verbindung zu externen Schriftarten-Servern (insbesondere Google Fonts) wird beim Besuch unserer Website <strong>nicht</strong> aufgebaut. Es werden in diesem Zusammenhang keine personenbezogenen Daten an Dritte übermittelt.
+                    Zur einheitlichen typografischen Darstellung unserer Website verwenden wir den Webfont-Dienst <strong>Adobe Fonts</strong> (vormals Typekit) der <strong>Adobe Systems Software Ireland Limited</strong>, 4-6 Riverwalk, City West Business Campus, Saggart, Dublin 24, Irland (für EWR-Nutzer:innen; zusammen mit der Adobe Inc., 345 Park Avenue, San Jose, CA 95110-2704, USA, nachfolgend „Adobe").
                 </p>
                 <p>
-                    <em>Hintergrund: Das LG München I hat mit Urteil vom 20. Jänner 2022 (Az. 3 O 17493/20) die dynamische Einbindung von Google Fonts ohne Einwilligung als Datenschutzverstoß beurteilt. Aus Vorsichtsgründen verzichten wir auf die dynamische Einbindung.</em>
+                    <strong>Erhobene Daten:</strong> Beim Aufruf unserer Website lädt Ihr Browser die benötigten Schriftarten direkt von den Adobe-Servern (<code>use.typekit.net</code> und <code>p.typekit.net</code>). Dabei werden technische Verbindungsdaten an Adobe übertragen, insbesondere: IP-Adresse, Browsertyp und -version, verwendetes Betriebssystem, Referrer-URL und Zeitpunkt des Aufrufs.
+                </p>
+                <p>
+                    <strong>Zweck:</strong> Sicherstellung einer einheitlichen und professionellen Darstellung der Website-Inhalte mit den gestalterisch passenden Schriftarten. Das Schriftbild ist Bestandteil der Gestaltungsidentität unserer Marke.
+                </p>
+                <p>
+                    <strong>Rechtsgrundlage:</strong> <strong>Art. 6 Abs. 1 lit. f DSGVO</strong> (berechtigtes Interesse an einer visuell konsistenten und fachlich seriösen Außendarstellung). Ein gleichwertiges Ergebnis mit lokal gehosteten Schriftarten ist bei variablen Webfonts mit optischer Größenachse derzeit nicht vergleichbar umsetzbar.
+                </p>
+                <p>
+                    <strong>Cookies:</strong> Adobe Fonts setzt nach eigenen Angaben <strong>keine Cookies</strong> für die reine Schriftauslieferung; gespeichert wird lediglich die Schriftdatei selbst im Browser-Cache. Eine profilbasierte Nachverfolgung findet nicht statt.
+                </p>
+                <p>
+                    <strong>Datenübermittlung in die USA:</strong> Da Adobe ein US-Unternehmen mit weltweiten Infrastruktur ist, kann eine Verarbeitung in den USA nicht ausgeschlossen werden. Adobe Inc. ist unter dem <strong>EU-US Data Privacy Framework (DPF)</strong> selbstzertifiziert; die Europäische Kommission hat mit Angemessenheitsbeschluss vom 10. Juli 2023 (C(2023) 4745) festgestellt, dass die USA im Rahmen des DPF ein angemessenes Datenschutzniveau für zertifizierte Organisationen gewährleisten (Art. 45 DSGVO). Ergänzend gelten die <strong>EU-Standardvertragsklauseln</strong> (Art. 46 Abs. 2 lit. c DSGVO).
+                </p>
+                <p>
+                    <strong>Auftragsverarbeitung:</strong> Mit Adobe besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO.
+                </p>
+                <p>
+                    <strong>Widerspruch:</strong> Sie können der Verarbeitung jederzeit gemäß Art. 21 DSGVO widersprechen. Im Browser lässt sich das Laden externer Schriftarten zusätzlich durch Inhaltsblocker oder Browser-Erweiterungen unterbinden; in diesem Fall wird die Website mit den systemeigenen Fallback-Schriftarten (Georgia, Arial) dargestellt.
+                </p>
+                <p>
+                    Weitere Informationen zur Datenverarbeitung bei Adobe finden Sie in der <a href="https://www.adobe.com/de/privacy/policy.html" target="_blank" rel="noopener noreferrer">Adobe-Datenschutzerklärung</a> sowie unter <a href="https://www.adobe.com/de/privacy/policies/adobe-fonts.html" target="_blank" rel="noopener noreferrer">Adobe Fonts · Datenschutz</a>.
+                </p>
+                <p>
+                    <em>Hintergrund: Das LG München I hat mit Urteil vom 20. Jänner 2022 (Az. 3 O 17493/20) die dynamische Einbindung von Google Fonts ohne Einwilligung als Datenschutzverstoß beurteilt. Adobe Fonts unterscheidet sich von diesem Szenario wesentlich: Adobe ist DPF-zertifiziert, Standardvertragsklauseln sind abgeschlossen, es wird kein Tracking-Cookie gesetzt, und die Einbindung dient einem eng umrissenen Gestaltungszweck. Eine Restunsicherheit in Bezug auf die Datenübermittlung in die USA kann dennoch nicht ausgeschlossen werden.</em>
                 </p>
 
-                <h2>11. Kooperationspartner und Content-Distribution</h2>
+                <h2>10. Kooperationspartner und Content-Distribution</h2>
                 <p>
                     Produzierte Inhalte werden – nach ausdrücklicher Freigabe durch den jeweiligen Auftraggeber – teilweise über redaktionelle Kooperationspartner (insbesondere Walter Senk / immobilien-redaktion.com und Bernd Affenzeller / Bau &amp; Immobilien Report / Report Verlag) sowie über den LinkedIn-Kanal von Gerhard Popp distribuiert. Eine Verarbeitung personenbezogener Daten von Website-Besucher:innen ist damit nicht verbunden.
                 </p>
@@ -216,16 +228,16 @@ class extends Component {
                     Soweit Interview-Gäste oder andere Mitwirkende in den Videos erkennbar sind, werden die dafür erforderlichen datenschutzrechtlichen Einwilligungen (Art. 6 Abs. 1 lit. a DSGVO) bzw. Einwilligungen nach § 78 UrhG durch den jeweiligen Auftraggeber eingeholt.
                 </p>
 
-                <h2>12. Auftragsverarbeiter und Empfänger</h2>
+                <h2>11. Auftragsverarbeiter und Empfänger</h2>
                 <p>
                     Zur Erbringung unserer Leistungen setzen wir sorgfältig ausgewählte Auftragsverarbeiter ein. Mit allen bestehen Verträge gemäß Art. 28 DSGVO:
                 </p>
                 <ul>
-                    <li><strong>Webhosting:</strong> <em>[Name, Anschrift des Hosters]</em>,</li>
+                    <li><strong>Webhosting:</strong> DigitalOcean, LLC, 101 Avenue of the Americas, 10th Floor, New York, NY 10013, USA — mit EU-Rechenzentrum,</li>
                     <li><strong>E-Mail-Dienst:</strong> Resend (Resend Inc., Delaware, USA) für den Versand transaktionaler E-Mails,</li>
+                    <li><strong>Schriftarten:</strong> Adobe Systems Software Ireland Limited (Adobe Fonts / Typekit), Dublin, Irland,</li>
                     <li><strong>Dateiübertragung / Lieferung:</strong> WeTransfer B.V., Amsterdam, Niederlande; Vimeo.com, Inc., USA; ggf. eigene Cloud-Lösung <em>[Anbieter, Standort]</em>,</li>
                     <li><strong>Webanalyse:</strong> Google Ireland Limited (GA4),</li>
-                    <li><strong>Terminbuchung:</strong> <em>[Cal.com oder Calendly]</em>,</li>
                     <li><strong>Buchhaltung/Steuerberatung:</strong> <em>[Kanzleiname, Adresse]</em>,</li>
                     <li><strong>Newsletter/CRM</strong> (sofern eingesetzt): <em>[Anbieter]</em>.</li>
                 </ul>
@@ -233,7 +245,7 @@ class extends Component {
                     Eine Weitergabe an sonstige Dritte erfolgt nur, wenn dies gesetzlich vorgeschrieben, für die Vertragserfüllung erforderlich oder durch Ihre Einwilligung gedeckt ist.
                 </p>
 
-                <h2>13. Ihre Rechte als betroffene Person</h2>
+                <h2>12. Ihre Rechte als betroffene Person</h2>
                 <p>Sie haben hinsichtlich der Sie betreffenden personenbezogenen Daten folgende Rechte:</p>
                 <ul>
                     <li><strong>Auskunftsrecht</strong> (Art. 15 DSGVO),</li>
@@ -248,7 +260,7 @@ class extends Component {
                     Zur Geltendmachung Ihrer Rechte genügt eine formlose Mitteilung an die in Abschnitt 1 genannten Kontaktdaten.
                 </p>
 
-                <h2>14. Beschwerderecht bei der Aufsichtsbehörde</h2>
+                <h2>13. Beschwerderecht bei der Aufsichtsbehörde</h2>
                 <p>
                     Sie haben unbeschadet anderweitiger Rechtsbehelfe das Recht auf <strong>Beschwerde</strong> bei einer Datenschutz-Aufsichtsbehörde, insbesondere bei der für Sie zuständigen österreichischen:
                 </p>
@@ -260,17 +272,17 @@ class extends Component {
                     Web: <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer">www.dsb.gv.at</a>
                 </p>
 
-                <h2>15. Datensicherheit</h2>
+                <h2>14. Datensicherheit</h2>
                 <p>
                     Wir treffen nach dem Stand der Technik angemessene technische und organisatorische Sicherheitsmaßnahmen gemäß Art. 32 DSGVO, um Ihre Daten vor unbefugtem Zugriff, Verlust, Missbrauch oder Manipulation zu schützen. Hierzu zählen insbesondere: SSL/TLS-Verschlüsselung aller über die Website übertragenen Daten (HTTPS), regelmäßige Sicherheitsupdates, restriktives Rollen- und Berechtigungsmanagement, physische Zugangsbeschränkungen, verschlüsselte Backups sowie verpflichtende Vertraulichkeitsvereinbarungen mit allen eingesetzten Dienstleistern.
                 </p>
 
-                <h2>16. Keine automatisierte Entscheidungsfindung</h2>
+                <h2>15. Keine automatisierte Entscheidungsfindung</h2>
                 <p>
                     Eine ausschließlich automatisierte Entscheidungsfindung oder ein Profiling im Sinne des Art. 22 DSGVO findet <strong>nicht</strong> statt.
                 </p>
 
-                <h2>17. Stand und Aktualität</h2>
+                <h2>16. Stand und Aktualität</h2>
                 <p>
                     Diese Datenschutzerklärung wurde zuletzt am 19. April 2026 aktualisiert. Durch die Weiterentwicklung unserer Website oder geänderte gesetzliche bzw. behördliche Vorgaben kann eine Anpassung erforderlich werden.
                 </p>

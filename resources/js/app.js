@@ -71,11 +71,27 @@ document.addEventListener('alpine:init', () => {
         open(id) {
             this.openId = Number(id);
             document.documentElement.style.overflow = 'hidden';
+            this.syncUrl(id);
         },
 
         close() {
             this.openId = null;
             document.documentElement.style.overflow = '';
+            this.syncUrl(null);
+        },
+
+        // Schreibt den aktuellen Modal-Zustand in die URL, ohne History-Eintrag,
+        // damit der Link per Share-Button den Consumer direkt ins offene Modal bringt.
+        syncUrl(id) {
+            try {
+                const url = new URL(window.location.href);
+                if (id === null) {
+                    url.searchParams.delete('kalkulation');
+                } else {
+                    url.searchParams.set('kalkulation', String(id));
+                }
+                window.history.replaceState({}, '', url.toString());
+            } catch (e) { /* ignorieren, ältere Browser ohne URL-API */ }
         },
     });
 });

@@ -144,10 +144,10 @@ return [
         'twitter_handle' => env('OFFICETALK_TWITTER_HANDLE'),
 
         'default_image' => [
-            'url' => '/images/og/officetalk-default.jpg',
-            'width' => 1200,
-            'height' => 630,
-            'alt' => 'OfficeTalk – B2B-Videoproduktion in Wien',
+            'url' => '/distribution-parallax-image.jpg',
+            'width' => 1920,
+            'height' => 1080,
+            'alt' => 'OfficeTalk – B2B-Videoproduktion in Wien, redaktionelle Distribution in Fachmedien',
         ],
 
         'organization' => [

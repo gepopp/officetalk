@@ -306,7 +306,7 @@ new class extends Component {
                 title="{{ $activeTitle ?? 'OfficeTalk Video' }}"
                 class="absolute inset-0 h-full w-full transition-opacity duration-500 ease-editorial"
                 x-bind:class="ready ? 'opacity-100' : 'opacity-0'"
-                x-bind:style="playback ? '' : 'pointer-events: none;'"
+                x-bind:style="$wire.playback ? '' : 'pointer-events: none;'"
                 frameborder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
                 @load="attachPlayer($el)"

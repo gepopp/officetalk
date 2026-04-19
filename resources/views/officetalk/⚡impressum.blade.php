@@ -63,7 +63,6 @@ class extends Component {
 
                 <h2>Gewerberechtliche Angaben</h2>
                 <p>
-                    UID-Nummer: <em>[ATU-Nummer – vor Go-Live einfügen]</em><br>
                     Gewerbeberechtigung: Werbeagentur (freies Gewerbe)<br>
                     Gewerbebehörde: Magistrat der Stadt Wien, Magistratisches Bezirksamt für den <em>[Bezirk]</em>. Bezirk<br>
                     Mitglied der Wirtschaftskammer Wien, Fachgruppe Werbung und Marktkommunikation

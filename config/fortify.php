@@ -124,34 +124,26 @@ return [
     | Register View Routes
     |--------------------------------------------------------------------------
     |
-    | Here you may specify if the routes returning views should be disabled as
-    | you may not need them when building your own application. This may be
-    | especially true if you're writing a custom single-page application.
+    | OfficeTalk ist eine reine Marketing-Landingpage ohne öffentlichen Login-
+    | oder Registrierungsbereich. Views deaktiviert → keine GET /login-, /register-,
+    | /forgot-password-, /reset-password-, /verify-email- und /confirm-password-Routes.
     |
     */
 
-    'views' => true,
+    'views' => false,
 
     /*
     |--------------------------------------------------------------------------
     | Features
     |--------------------------------------------------------------------------
     |
-    | Some of the Fortify features are optional. You may disable the features
-    | by removing them from this array. You're free to only remove some of
-    | these features, or you can even remove all of these if you need to.
+    | Leer-Array → Registration, Password-Reset, Email-Verification und
+    | Two-Factor-Authentication sind komplett deaktiviert. Die Fortify-
+    | Package-Klassen bleiben aber geladen (TwoFactorAuthenticatable-Trait
+    | am User-Model funktioniert weiterhin ohne Route-Auslieferung).
     |
     */
 
-    'features' => [
-        Features::registration(),
-        Features::resetPasswords(),
-        Features::emailVerification(),
-        Features::twoFactorAuthentication([
-            'confirm' => true,
-            'confirmPassword' => true,
-            // 'window' => 0
-        ]),
-    ],
+    'features' => [],
 
 ];

@@ -74,11 +74,13 @@ new class extends Component {
 </style>
 @endonce
 
-<section id="service" class="relative overflow-hidden bg-bg py-s7">
+<section class="relative overflow-hidden bg-bg py-s7">
     <div class="relative container">
 
-        {{-- Masthead · Eyebrow + H2 links, Intro rechts --}}
-        <header class="grid gap-s5 md:grid-cols-12 md:gap-s6">
+        {{-- Masthead · Eyebrow + H2 links, Intro rechts.
+             Scroll-Anker liegt hier, damit beim Klick auf Menü "Prozess"
+             direkt die Headline sichtbar ist (statt des py-s7-Paddings). --}}
+        <header id="service" class="grid gap-s5 scroll-mt-[120px] md:grid-cols-12 md:gap-s6">
             <div class="md:col-span-5">
                 <p class="font-sans text-eyebrow uppercase text-muted">
                     Service — ein Ansprechpartner, ein Angebot

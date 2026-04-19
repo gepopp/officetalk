@@ -1,3 +1,4 @@
+@import url("https://use.typekit.net/dmd8svh.css");
 @import 'tailwindcss';
 @import '../../vendor/livewire/flux/dist/flux.css';
 
@@ -24,9 +25,9 @@
     /* Logo-Detail: Rillen und Objektiv am Koffer. Light = Ink, Dark = Accent. */
     --color-koffer-detail: #111111;
 
-    /* Typografie */
-    --font-display: "Fraunces", "Tiempos Headline", Georgia, serif;
-    --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+    /* Typografie · Adobe Fonts (Typekit, kit id dmd8svh) */
+    --font-display: "new-spirit", "Tiempos Headline", Georgia, serif;
+    --font-sans: "inter-18pt", "Inter", system-ui, -apple-system, sans-serif;
 
     /* Text-Skala */
     --text-eyebrow: 13px;

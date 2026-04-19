@@ -51,7 +51,6 @@ class extends Component {
                 <p>
                     <strong>Gerhard Popp</strong>, handelnd unter der Geschäftsbezeichnung „OfficeTalk" (im Folgenden „Auftragnehmer"),<br>
                     {{ $contact['address']['street'] }}, {{ $contact['address']['postal_code'] }} {{ $contact['address']['city'] }},<br>
-                    UID-Nummer: <em>[ATU-Nummer]</em>,<br>
                     Gewerbeberechtigung: Werbeagentur (freies Gewerbe), Gewerbebehörde: Magistrat der Stadt Wien, MBA <em>[Bezirk]</em>,<br>
                     Mitglied der Wirtschaftskammer Wien, Fachgruppe Werbung und Marktkommunikation,
                 </p>
