@@ -117,7 +117,6 @@ new class extends Component {
 @endscript
 
 <section
-    id="distribution"
     class="dark bg-bg pb-s7 text-ink"
     x-data="officetalkDistributionParallax"
 >
@@ -149,7 +148,7 @@ new class extends Component {
         :style="`transform: translate3d(0, ${-progress * 290}px, 0); margin-bottom: ${-progress * 290}px;`"
     >
         {{-- Masthead · Eyebrow + H2 links, Intro rechts, beide auf gleicher Grid-Höhe --}}
-        <header class="grid gap-s5 md:grid-cols-12 md:gap-s6">
+        <header class="grid gap-s5 md:grid-cols-12 md:gap-s6" id="distribution">
             <div class="md:col-span-5">
                 <p class="font-sans text-eyebrow uppercase text-accent">
                     Distribution — was nach der Produktion folgt

@@ -24,7 +24,9 @@
       "Bash(magick --version)",
       "Bash(php -m)",
       "Bash(php build-favicon.php)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(npm uninstall *)",
+      "Bash(composer install *)"
     ]
   }
 }
