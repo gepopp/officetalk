@@ -15,7 +15,7 @@ new class extends Component {
             'video' => 'Gerhard-Office-Talk.webm',
             'meta' => '≈ 13.000 Fachfollower · Immobilien · Bau · Recht · PropTech',
             'body' => 'Ein gewachsenes Netzwerk von rund 13.000 Followern aus Immobilien, Bau, Recht, Architektur und PropTech. Kein gekaufter, kein breit gestreuter Account – sondern über Jahre aufgebaute fachliche Sichtbarkeit in der DACH-Entscheiderebene. OfficeTalk-Produktionen werden über diesen Kanal als Erstveröffentlichung oder als Sekundärverbreitung ausgespielt. Für Kundenprojekte heißt das: Ihr Video landet nicht in einem anonymen Feed, sondern auf dem Schreibtisch der Menschen, die Sie erreichen wollen.',
-            'email' => 'gerhard@welofeinteraction.co',
+            'email' => 'gerhard@weloveinteraction.com',
             'email_label' => 'An Gerhard schreiben',
         ],
         [
