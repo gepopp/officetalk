@@ -177,6 +177,7 @@ new class extends Component {
 </style>
 @endonce
 
+<div class="officetalk-formate-wrapper">
 <section id="formats" class="officetalk-formate relative overflow-hidden bg-surface py-s7">
 
     {{-- Dezenter Grid-Raster im Hintergrund für die Magazin-Atmosphäre --}}
@@ -289,17 +290,55 @@ new class extends Component {
                 </article>
             @endforeach
         </div>
+    </div>
+</section>
 
-        {{-- Divider · Akzent-Streifen mit Label-Ecke für Magazin-Look --}}
-        <div class="relative mt-s7 md:mt-[128px]">
-            <hr class="border-line" />
-            <span aria-hidden="true" class="absolute -top-s2 left-1/2 -translate-x-1/2 bg-surface px-s3 font-display text-meta italic text-muted">
-                ·
-            </span>
+{{-- ══════════════════════════════════════════════════════════
+     Sektion 4.5 · Outtake-Intermezzo („Hoppala.") · Rhythmusbruch
+     Eigene Section mit bg-bg (heller als bg-surface der Formate)
+     signalisiert ohne Worte: hier passiert etwas anderes.
+     ══════════════════════════════════════════════════════════ --}}
+<section
+    class="officetalk-outtake relative bg-bg py-s7 md:py-[128px]"
+    aria-labelledby="outtake-heading"
+>
+    <div class="container">
+        <div class="mx-auto max-w-[880px] text-center">
+            <h2 id="outtake-heading" class="font-display text-h3 font-medium italic leading-tight text-ink md:text-[40px] lg:text-h2">
+                Hoppala.
+            </h2>
+            <p class="mt-s3 font-sans text-lead text-muted">
+                Es ist nicht immer alles ernst. Gut so.
+            </p>
+            <p class="mt-s5 font-sans text-meta italic text-muted">
+                Aus dem Dreh mit Janine Schwabe-Heder, Schindler Aufzüge — Employerbranding und Lehrlingsakquise mit TikTok.
+            </p>
         </div>
 
+        <div class="mx-auto mt-s5 max-w-[880px]">
+            <x-officetalk::video-player
+                vimeo-id="1185093576"
+                title="Outtake · Hoppala · Janine Schwabe-Heder, Schindler Aufzüge"
+                poster-alt="Outtake aus dem Dreh mit Janine Schwabe-Heder, Schindler Aufzüge"
+                class="rounded shadow-[0_24px_48px_-24px_rgba(17,17,17,0.25)]"
+            />
+        </div>
+
+        <p class="mx-auto mt-s4 max-w-[880px] text-center font-sans text-meta text-muted">
+            Mit freundlicher Genehmigung von Janine Schwabe-Heder — vielen Dank fürs Mitspielen.
+        </p>
+    </div>
+</section>
+
+{{-- ══════════════════════════════════════════════════════════
+     Sektion 4 (Fortsetzung) · Weitere Videoformate auf Anfrage
+     Getrennte Section, damit die Outtake-Intermezzo-Sektion oben
+     eine eigenständige bg-bg-Fläche behält.
+     ══════════════════════════════════════════════════════════ --}}
+<section class="officetalk-formate-weitere relative bg-surface py-s7">
+    <div class="container">
         {{-- Weitere Formate auf Anfrage · H3-Header + Intro + chequered Brick-Layout --}}
-        <div class="mt-s7">
+        <div>
             <div class="grid gap-s5 md:grid-cols-12 md:gap-s6">
                 <div class="md:col-span-5">
                     <h3 class="font-display text-h3 font-medium leading-tight text-balance text-ink">
@@ -355,3 +394,4 @@ new class extends Component {
 
     </div>
 </section>
+</div>{{-- /officetalk-formate-wrapper · Livewire-Single-Root --}}
