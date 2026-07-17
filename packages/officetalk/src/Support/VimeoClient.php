@@ -28,8 +28,13 @@ class VimeoClient
 
         return Cache::remember($cacheKey, now()->addMinutes(30), function () use ($tag, $token, $limit): array {
             try {
+                // query schraenkt serverseitig auf Titel-, Description- und Tag-Treffer
+                // ein. Ohne diesen Parameter sieht die Anfrage nur die 100 zuletzt
+                // hochgeladenen Videos des Accounts (per_page-Maximum laut Vimeo-Spec)
+                // und uebersieht aeltere getaggte Folgen.
                 $response = self::request($token)->get('https://api.vimeo.com/me/videos', [
                     'per_page' => 100,
+                    'query' => $tag,
                     'sort' => 'date',
                     'direction' => 'desc',
                     'fields' => 'uri,name,link,tags.name,pictures.sizes',
